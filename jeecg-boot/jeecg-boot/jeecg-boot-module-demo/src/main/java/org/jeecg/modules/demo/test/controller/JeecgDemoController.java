@@ -296,4 +296,12 @@ public class JeecgDemoController extends JeecgController<JeecgDemo, IJeecgDemoSe
 //    }
 //    @Autowired
 //    private RabbitMqClient rabbitMqClient;
+
+    @GetMapping(value = "hello")
+    public Result<String> hello() {
+        Result<String> result = new Result<String>();
+        result.setResult("Hello World!");
+        result.setSuccess(true);
+        return result;
+    }
 }
